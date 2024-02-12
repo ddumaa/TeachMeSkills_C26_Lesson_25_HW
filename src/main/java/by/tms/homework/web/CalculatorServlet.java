@@ -27,7 +27,7 @@ public class CalculatorServlet extends HttpServlet {
         separationEnteredDataAndSaving.separationEnteredDataAndSaving(parameters, storageData);
 
         String s = dataChecking.check(storageData, message);
-        resp.getWriter().print(s);
+        resp.getWriter().print("<html><body><center><h1>" + s + "</h1></center></body></html>");
 
         message.clearMessage();
         storageData.clearOperations();
